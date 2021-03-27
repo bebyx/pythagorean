@@ -2,15 +2,15 @@
 #include <math.h>
 #include "pythagorean.h"
 
-int * pythagorean(int hypotenuse, int cathetus) {
-  int other_cathetus, square;
-  other_cathetus = sqrt((hypotenuse*hypotenuse) - (cathetus*cathetus));
 
-  square = (cathetus + other_cathetus) / 2;
+int get_other_cathetus(int hypotenuse, int cathetus) {
+  int other_cathetus = sqrt((hypotenuse*hypotenuse) - (cathetus*cathetus));
 
-  int *result = malloc(sizeof(int) * 2);
-  result[0] = other_cathetus;
-  result[1] = square;
+  return other_cathetus;
+}
 
-  return result;
+int get_square(int cathetus, int other_cathetus) {
+  int square = (cathetus + other_cathetus) / 2;
+
+  return square;
 }
