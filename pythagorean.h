@@ -1,7 +1,7 @@
 #ifndef PYTHAGOREAN_H_INCLUDED
 #define PYTHAGOREAN_H_INCLUDED
 
-int get_other_cathetus(int hypotenuse, int cathetus);
-int get_square(int cathetus, int other_cathetus);
+float get_other_cathetus(float hypotenuse, float cathetus);
+float get_area(float cathetus, float other_cathetus);
 
 #endif

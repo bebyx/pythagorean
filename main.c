@@ -3,18 +3,18 @@
 #include "pythagorean.h"
 
 int main(int argc, char const *argv[]) {
-  int hypotenuse, cathetus,
-      other_cathetus, square;
+  float hypotenuse, cathetus,
+      other_cathetus, area;
 
   puts("Enter hypotenuse:");
-  scanf("%d", &hypotenuse);
+  scanf("%f", &hypotenuse);
   puts("Enter known cathetus:");
-  scanf("%d", &cathetus);
+  scanf("%f", &cathetus);
 
   other_cathetus = get_other_cathetus(hypotenuse, cathetus);
-  square = get_square(cathetus, other_cathetus);
+  area = get_area(cathetus, other_cathetus);
 
-  printf("other_cathetus: %d, square: %d\n", other_cathetus, square);
+  printf("other_cathetus: %.2f, area: %.2f\n", other_cathetus, area);
 
   return 0;
 }
